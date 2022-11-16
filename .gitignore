@@ -1,4 +1,5 @@
 *.log
 *.xyz
 *.pdf
+__pycache__
 vikmc
