@@ -190,6 +190,11 @@ int main(int argc, char *args[])
 	
 	printf("fraction surviving: %.20g +- %.20g\n", fs, fs_err);
 	printf("ratio i/v: %.20g +- %.20g\n", riv, riv_err);
+
+	free(f);
+	free(r);
+
+	fclose(fd);
 	
 	return 0;
 }
