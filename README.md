@@ -19,7 +19,7 @@ $$
 \Gamma_i = \sum_{j=1}^i \text{JR}_j(T)
 $$
 
-using the condition $U \Gamma_{\text{tot}} \leq \Gamma_i,$ where $U \sim \mathcal{U}(0, 1)$ a uniformly distributed random number. Time step is determined from the total transition rate $\Gamma_{\text{tot}}=n_v+n_i$ as
+using the condition $U \Gamma_{\text{tot}} \leq \Gamma_i,$ where $U \sim \mathcal{U}(0, 1)$ is a uniformly distributed random number. Time step is determined from the total transition rate $\Gamma_{\text{tot}}=n_v+n_i$ as
 
 $$
 \Delta t = \frac{-\ln(U)}{\Gamma_{\text{tot}}}.
@@ -41,6 +41,8 @@ Generate all results/plots:
 	`./run.sh`
 
 ## Plotting
+
+The vi.xyz movie file contains position data of vacancies (type 0) and interstitials (type 1). This can be visualized with Ovito.
 
 Plotting one log file:
 	`./plot_log.py <out.log>`
