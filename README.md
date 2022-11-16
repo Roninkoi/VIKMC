@@ -10,7 +10,7 @@ Simulate movement of vacancies $n_v$ and interstitials $n_i$ in an amorphous sol
 The vacancies and interstitials have a jump rate determined by
 
 $$
-\text{JR} = w \exp\left(\frac{-E_m}{k_B T}\right),
+\text{JR}(T) = w \exp\left(\frac{-E_m}{k_B T}\right),
 $$
 
 at temperature $T$ with migration activation energy $E_m$. The transition that occurs is chosen from the cumulative rate
@@ -19,13 +19,7 @@ $$
 \Gamma_i = \sum_{j=1}^i \text{JR}_j(T)
 $$
 
-using the condition
-
-$$
-U \Gamma_{\text{tot}} \leq \Gamma_i.
-$$
-
-where $U \sim \mathcal{U}(0, 1)$ a uniformly distributed random number. Time step is determined from the total transition rate $\Gamma_{\text{tot}}=n_v+n_i$ as
+using the condition $U \Gamma_{\text{tot}} \leq \Gamma_i,$ where $U \sim \mathcal{U}(0, 1)$ a uniformly distributed random number. Time step is determined from the total transition rate $\Gamma_{\text{tot}}=n_v+n_i$ as
 
 $$
 \Delta t = \frac{-\ln(U)}{\Gamma_{\text{tot}}}.
